@@ -1,9 +1,25 @@
-import React from 'react'
+import Header from "@/components/shared/Header";
+import TotalBalanceBox from "@/components/shared/TotalBalanceBox";
+import React from "react";
 
 const Home = () => {
-  return (
-    <div>Home</div>
-  )
-}
+	const loggedIn = { firstName: "John", lastName: "sarkar" };
 
-export default Home
+	return (
+		<section className="home">
+			<div className="home-content">
+				<header className="home-header">
+					<Header
+						type="greeting"
+						title="hello"
+						user={loggedIn?.firstName || "Guest"}
+						subtext="heloow world"
+					/>
+					<TotalBalanceBox />
+				</header>
+			</div>
+		</section>
+	);
+};
+
+export default Home;
