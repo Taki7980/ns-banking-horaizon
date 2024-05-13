@@ -202,7 +202,7 @@ declare interface BankTabItemProps {
   appwriteItemId?: string;
 }
 
-declare interface TotlaBalanceBoxProps {
+declare interface TotalBalanceProps {
   accounts: Account[];
   totalBanks: number;
   totalCurrentBalance: number;
