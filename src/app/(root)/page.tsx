@@ -11,9 +11,9 @@ const Home = () => {
 				<header className="home-header">
 					<Header
 						type="greeting"
-						title="hello"
+						title="Welcome to the Horaizon App"
 						user={loggedIn?.firstName || "Guest"}
-						subtext="heloow world"
+						subtext="Manage your personal/public accounts and transactions safely & securely."
 					/>
 					<TotalBalanceBox
 						accounts={[]}
