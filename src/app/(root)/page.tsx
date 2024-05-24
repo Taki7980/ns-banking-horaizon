@@ -22,7 +22,7 @@ const Home = () => {
 						totalCurrentBalance={1298.35}
 					/>
 				</header>
-				RECENT TRANSACTIONS
+				RECENT TRANSACTIONS potai
 			</div>
 			<RightSidebar/>
 		</section>
