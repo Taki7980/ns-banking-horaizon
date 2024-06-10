@@ -144,9 +144,12 @@ declare interface CreditCardProps {
 	userName: string;
 	showBalance?: boolean;
 }
+
+const formSchema = authFormSchema("sign-up");
+
 declare interface CustomInputProps {
-	form: Control<z.infer<typeof authFormSchema>>;
-	name: FieldPath<z.infer<typeof authFormSchema>>;
+	form: Control<z.infer<typeof formSchema>>;
+	name: FieldPath<z.infer<typeof formSchema>>;
 	label: string;
 	type?: string;
 }
