@@ -12,12 +12,13 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import CustomInput from "./CustomInput";
 import { useRouter } from "next/navigation";
-import { signIn, signUp } from "@/lib/actions/user.action";
+import {  signIn, signUp } from "@/lib/actions/user.action";
 
 const AuthForm = ({ type }: AuthFormProps) => {
 	const [user, setUser] = useState(null);
 	const [isLoading, setIsLoading] = useState(false);
 	const router = useRouter();
+	
 
 	const formSchema = authFormSchema(type);
 
@@ -39,14 +40,14 @@ const AuthForm = ({ type }: AuthFormProps) => {
 				setUser(newUser);
 			}
 			// signin with appwrite
-			if (type === "sign-in") {
-				const response = await signIn({
-					email: data.email,
-					password: data.password,
-				});
+			// if (type === "sign-in") {
+			// 	const response = await signIn({
+			// 		email: data.email,
+			// 		password: data.password,
+			// 	});
 
-				if(response) router.push('/')
-			}
+			// 	if (response) router.push("/");
+			// }
 		} catch (error: any) {
 			console.log(error);
 		} finally {
