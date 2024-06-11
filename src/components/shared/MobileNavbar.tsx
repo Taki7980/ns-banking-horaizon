@@ -13,6 +13,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { sidebarLinks } from "@/constants";
 import { usePathname } from "next/navigation";
+import { MobileNavProps } from "@/types";
 
 const MobileNavbar = ({ user }: MobileNavProps) => {
 	const pathname = usePathname();

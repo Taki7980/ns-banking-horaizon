@@ -1,3 +1,4 @@
+import { HeaderProps } from "@/types";
 import React from "react";
 
 const Header = ({ type = "title", title, subtext, user }: HeaderProps) => {
